@@ -1,0 +1,94 @@
+ADVERSARIAL AUDIT — each check fails if the result is an artefact
+
+----------------------------------------------------------------------------
+1. STRUCTURAL: errors, duplicates, index ranges, candidate mass
+----------------------------------------------------------------------------
+  PASS  colour heldout: no error fields  1557 rows
+  PASS  colour heldout: no duplicate cells  0 dups
+  PASS  colour heldout: candidate mass >= 0.90 on every cell  min 0.998 median 1.0000
+  PASS  colour heldout: all indices within option set  0 out of range
+  PASS  colour recovery: no error fields  1038 rows
+  PASS  colour recovery: no duplicate cells  0 dups
+  PASS  colour recovery: candidate mass >= 0.90 on every cell  min 1.000 median 1.0000
+  PASS  colour recovery: all indices within option set  0 out of range
+  PASS  colour mismatch: no error fields  1038 rows
+  PASS  colour mismatch: no duplicate cells  0 dups
+  PASS  colour mismatch: candidate mass >= 0.90 on every cell  min 0.982 median 1.0000
+  PASS  colour mismatch: all indices within option set  0 out of range
+  PASS  spatial grounding: no error fields  720 rows
+  PASS  spatial grounding: no duplicate cells  0 dups
+  PASS  spatial grounding: candidate mass >= 0.90 on every cell  min 1.000 median 1.0000
+  PASS  spatial grounding: all indices within option set  0 out of range
+  PASS  spatial mismatch: no error fields  240 rows
+  PASS  spatial mismatch: no duplicate cells  0 dups
+  PASS  spatial mismatch: candidate mass >= 0.90 on every cell  min 1.000 median 1.0000
+  PASS  spatial mismatch: all indices within option set  0 out of range
+  PASS  coco convention: no error fields  2000 rows
+  PASS  coco convention: no duplicate cells  0 dups
+  PASS  coco convention: candidate mass >= 0.90 on every cell  min 0.949 median 1.0000
+  PASS  coco convention: all indices within option set  0 out of range
+  PASS  coco readership: no error fields  400 rows
+  PASS  coco readership: no duplicate cells  0 dups
+  PASS  coco readership: candidate mass >= 0.90 on every cell  min 0.984 median 1.0000
+  PASS  coco readership: all indices within option set  0 out of range
+
+----------------------------------------------------------------------------
+2. RECOMPUTE: does the stored `correct` flag match argmax == target?
+----------------------------------------------------------------------------
+  PASS  coco convention: correct == (argmax==target)  0/2000 mismatched
+  PASS  coco readership: correct == (argmax==target)  0/400 mismatched
+  PASS  colour heldout: visible_correct == (argmax==target)  0/1557
+
+----------------------------------------------------------------------------
+3. COCO GROUND TRUTH: recompute the answer cell from the raw box
+----------------------------------------------------------------------------
+  PASS  stored cell == cell recomputed from bbox  200 images, 0 wrong
+  PASS  admission: bbox area under 25% (spec says SEGMENTATION area)  32/200 images have a bbox over 25%; excluding them ENLARGES the effect (-48.5 -> -51.2 pts)
+  PASS  admission: centre clear of cell border  0 violations
+
+----------------------------------------------------------------------------
+4. CONTROLS: do the conditions with a known answer give it?
+----------------------------------------------------------------------------
+  PASS  q3 null control (label) near zero  mean DiD -0.423, n=173
+  PASS  q3 null control (numeric) near zero  mean DiD +0.344, n=173
+  PASS  q3 null control (numeric_bare) near zero  mean DiD -0.004, n=173
+  PASS  q3 null control (numeric_gloss) near zero  mean DiD -0.058, n=173
+  PASS  q3 null control (word) near zero  mean DiD -0.546, n=173
+  PASS  mismatch: the two scoring keys never collide  0 collisions
+  PASS  coco mismatch: keys never collide  0/200
+
+----------------------------------------------------------------------------
+5. PERMUTATION NULL: break the trial-to-answer pairing; accuracy must fall to chance
+----------------------------------------------------------------------------
+  PASS  coco locate cellname: shuffled pairing lands at chance  real 68.5%  shuffled 11.4+-2.3%  chance 11.1%
+  PASS  coco locate cellname: real beats shuffled by >3 sd  24.4 sd
+  PASS  coco locate pixel: shuffled pairing lands at chance  real 20.0%  shuffled 11.1+-2.2%  chance 11.1%
+  PASS  coco locate pixel: real vs shuffled (pixel is expected to be NEAR chance)  4.0 sd
+
+----------------------------------------------------------------------------
+6. PROMPTS: read the actual strings, do not trust the condition name
+----------------------------------------------------------------------------
+  PASS  coco pixel prompt states the image size
+
+----------------------------------------------------------------------------
+7. SAMPLE SIZES: do the n's in the paper match the files?
+----------------------------------------------------------------------------
+  PASS  colour heldout trials == 173  got 173
+  PASS  colour mismatch trials == 173  got 173
+  PASS  coco images == 200  got 200
+  PASS  coco readership images == 200  got 200
+
+----------------------------------------------------------------------------
+WHAT THIS AUDIT DOES NOT CHECK
+----------------------------------------------------------------------------
+  * that 4-bit quantisation does not change the conclusions
+  * that the effect holds beyond 3x3 spatial granularity
+  * that the COCO category names are equally easy for every model
+  * that greedy decoding is representative of sampled decoding
+  * anything about models not run here
+  These are limitations of the study, not of the audit, and belong in the paper.
+
+----------------------------------------------------------------------------
+RESULT
+----------------------------------------------------------------------------
+  all checks passed (0 warnings)

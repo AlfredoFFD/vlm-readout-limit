@@ -1,0 +1,133 @@
+AUDIT 2 - cross-model, 8-bit, H8 and frontier data
+
+----------------------------------------------------------------------------
+1. PROMPT-TARGET CONSISTENCY  (parse the prompt, do not trust the field)
+----------------------------------------------------------------------------
+  PASS  Qwen3-VL-4B: option[target_idx] names the target cell  200 rows, 0 wrong, 0 unparsed
+  PASS  Qwen2.5-VL-7B: option[target_idx] names the target cell  200 rows, 0 wrong, 0 unparsed
+  PASS  InternVL3-2B: option[target_idx] names the target cell  200 rows, 0 wrong, 0 unparsed
+  PASS  Qwen3-VL-4B-8bit: option[target_idx] names the target cell  200 rows, 0 wrong, 0 unparsed
+  PASS  Qwen3-VL-4B: target_idx recomputed from the trial id  200 rows, 0 wrong
+  PASS  Qwen2.5-VL-7B: target_idx recomputed from the trial id  200 rows, 0 wrong
+  PASS  InternVL3-2B: target_idx recomputed from the trial id  200 rows, 0 wrong
+  PASS  Qwen3-VL-4B-8bit: target_idx recomputed from the trial id  200 rows, 0 wrong
+
+----------------------------------------------------------------------------
+2. PAIRING: did every model see the same images and the same prompts?
+----------------------------------------------------------------------------
+  PASS  Qwen3-VL-4B: same 200 images as the primary run  200 images, 0 differing
+  PASS  Qwen2.5-VL-7B: same 200 images as the primary run  200 images, 0 differing
+  PASS  InternVL3-2B: same 200 images as the primary run  200 images, 0 differing
+  PASS  Qwen3-VL-4B-8bit: same 200 images as the primary run  200 images, 0 differing
+  PASS  gemini: same 200 images as the primary run  200 images, 0 differing
+  PASS  gpt-4o: same 200 images as the primary run  200 images, 0 differing
+  PASS  Qwen2.5-VL-7B: prompts byte-identical to the primary run  2000 compared, 0 differing
+  PASS  InternVL3-2B: prompts byte-identical to the primary run  2000 compared, 0 differing
+  PASS  Qwen3-VL-4B-8bit: prompts byte-identical to the primary run  600 compared, 0 differing
+
+----------------------------------------------------------------------------
+3. FRONTIER: does the image actually match the prompt it was sent with?
+----------------------------------------------------------------------------
+  PASS  every referenced image decodes from the parquet  200/200
+  PASS  decoded image size == the size recorded in the annotations  0 mismatched
+  PASS  pixel prompt states the true dimensions of its own image  200 prompts, 0 wrong
+
+----------------------------------------------------------------------------
+4. FRONTIER: recompute correctness from the raw text the API returned
+----------------------------------------------------------------------------
+  PASS  gemini: correct/offvocab recomputed from raw text  800 rows, 0 disagree
+  PASS  gpt-4o: correct/offvocab recomputed from raw text  800 rows, 0 disagree
+
+----------------------------------------------------------------------------
+5. CONFOUND: is the convention gap really a PARSE-FAILURE gap?
+----------------------------------------------------------------------------
+        unparseable by condition: cellname 0.0%  norm1000 2.0%  pixel 5.5%  pixel_mismatch 7.5%
+  PASS  gemini: gap survives counting ONLY parseable answers  -11.1 pts, p=1.0e-04, n=189
+        unparseable by condition: cellname 0.5%  norm1000 11.5%  pixel 8.0%  pixel_mismatch 6.0%
+  PASS  gpt-4o: gap survives counting ONLY parseable answers  -3.8 pts, p=4.2e-01, n=184  (null in both analyses)
+
+----------------------------------------------------------------------------
+6. PERMUTATION NULL on the new files: break the pairing, expect chance
+----------------------------------------------------------------------------
+  PASS  Qwen3-VL-4B: shuffled pairing falls to chance  real 68.5%  shuffled 11.4+-2.3%  24 sd
+  PASS  Qwen2.5-VL-7B: shuffled pairing falls to chance  real 68.0%  shuffled 11.0+-2.2%  25 sd
+  PASS  InternVL3-2B: shuffled pairing falls to chance  real 46.0%  shuffled 11.6+-2.4%  14 sd
+  PASS  Qwen3-VL-4B-8bit: shuffled pairing falls to chance  real 76.0%  shuffled 11.4+-2.3%  28 sd
+  PASS  gemini: shuffled pairing falls to chance  real 94.5%  shuffled 11.2+-2.2%  38 sd
+  PASS  gpt-4o: shuffled pairing falls to chance  real 39.2%  shuffled 10.9+-2.3%  12 sd
+
+----------------------------------------------------------------------------
+7. STRUCTURE of all files added since the first audit
+----------------------------------------------------------------------------
+  PASS  Qwen3-VL-4B: no error rows  2000 rows, 0 errors
+  PASS  Qwen3-VL-4B: no duplicate cells  0 duplicates
+  PASS  Qwen3-VL-4B: indices in range  0 out of range
+  PASS  Qwen3-VL-4B: low first-token mass does not move any headline  0/2000 cells under 0.90, min 0.949, max headline shift 0.00 pts
+  PASS  Qwen2.5-VL-7B: no error rows  2000 rows, 0 errors
+  PASS  Qwen2.5-VL-7B: no duplicate cells  0 duplicates
+  PASS  Qwen2.5-VL-7B: indices in range  0 out of range
+  PASS  Qwen2.5-VL-7B: low first-token mass does not move any headline  52/2000 cells under 0.90, min 0.554, max headline shift 0.00 pts
+  PASS  InternVL3-2B: no error rows  2000 rows, 0 errors
+  PASS  InternVL3-2B: no duplicate cells  0 duplicates
+  PASS  InternVL3-2B: indices in range  0 out of range
+  PASS  InternVL3-2B: low first-token mass does not move any headline  0/2000 cells under 0.90, min 0.946, max headline shift 0.00 pts
+  PASS  Qwen3-VL-4B-8bit: no error rows  600 rows, 0 errors
+  PASS  Qwen3-VL-4B-8bit: no duplicate cells  0 duplicates
+  PASS  Qwen3-VL-4B-8bit: indices in range  0 out of range
+  PASS  Qwen3-VL-4B-8bit: low first-token mass does not move any headline  0/600 cells under 0.90, min 0.972, max headline shift 0.00 pts
+  PASS  gemini: no error rows  800 rows, 0 errors
+  PASS  gemini: no duplicate cells  0 duplicates
+  PASS  gemini: indices in range  0 out of range
+  PASS  gpt-4o: no error rows  800 rows, 0 errors
+  PASS  gpt-4o: no duplicate cells  0 duplicates
+  PASS  gpt-4o: indices in range  0 out of range
+  PASS  h8 stage1: no error rows  400 rows, 0 errors
+  PASS  h8 stage1: no duplicate cells  0 duplicates
+  PASS  h8 stage1: indices in range  0 out of range
+  PASS  h8 stage1: low first-token mass does not move any headline  0/400 cells under 0.90, min 0.997, max headline shift 0.00 pts
+  PASS  h8 stage2: no error rows  400 rows, 0 errors
+  PASS  h8 stage2: no duplicate cells  0 duplicates
+  PASS  h8 stage2: indices in range  0 out of range
+  PASS  h8 stage2: low first-token mass does not move any headline  0/400 cells under 0.90, min 0.998, max headline shift 0.00 pts
+  PASS  granularity 4x4: no error rows  400 rows, 0 errors
+  PASS  granularity 4x4: no duplicate cells  0 duplicates
+  PASS  granularity 4x4: indices in range  0 out of range
+  PASS  crossmodel InternVL3-2B-hf_contrast: no error rows  213 rows, 0 errors
+  PASS  crossmodel InternVL3-2B-hf_contrast: no duplicate cells  0 duplicates
+  PASS  crossmodel InternVL3-2B-hf_contrast: indices in range  0 out of range
+  PASS  crossmodel InternVL3-2B-hf_contrast: low first-token mass does not move any headline  2/426 cells under 0.90, min 0.838, max headline shift n/a
+  PASS  crossmodel Qwen2_5-VL-7B-Instruct_contrast: no error rows  213 rows, 0 errors
+  PASS  crossmodel Qwen2_5-VL-7B-Instruct_contrast: no duplicate cells  0 duplicates
+  PASS  crossmodel Qwen2_5-VL-7B-Instruct_contrast: indices in range  0 out of range
+  PASS  crossmodel Qwen2_5-VL-7B-Instruct_contrast: low first-token mass does not move any headline  59/426 cells under 0.90, min 0.195, max headline shift n/a
+  PASS  crossmodel SmolVLM-Instruct_contrast: no error rows  213 rows, 0 errors
+  PASS  crossmodel SmolVLM-Instruct_contrast: no duplicate cells  0 duplicates
+  PASS  crossmodel SmolVLM-Instruct_contrast: indices in range  0 out of range
+  PASS  crossmodel SmolVLM-Instruct_contrast: low first-token mass does not move any headline  22/142 cells under 0.90, min 0.151, max headline shift n/a
+  PASS  crossmodel llava-1_5-7b-hf_contrast: no error rows  144 rows, 0 errors
+  PASS  crossmodel llava-1_5-7b-hf_contrast: no duplicate cells  0 duplicates
+  PASS  crossmodel llava-1_5-7b-hf_contrast: indices in range  0 out of range
+  PASS  crossmodel llava-1_5-7b-hf_contrast: low first-token mass does not move any headline  0/96 cells under 0.90, min 0.982, max headline shift n/a
+
+----------------------------------------------------------------------------
+8. MISMATCH KEYS and H8 STAGING
+----------------------------------------------------------------------------
+  PASS  Qwen3-VL-4B: coordinate key and name key never coincide  200 mismatch rows, 0 collisions
+  PASS  Qwen2.5-VL-7B: coordinate key and name key never coincide  200 mismatch rows, 0 collisions
+  PASS  InternVL3-2B: coordinate key and name key never coincide  200 mismatch rows, 0 collisions
+  PASS  gemini: coordinate key and name key never coincide  200 mismatch rows, 0 collisions
+  PASS  gpt-4o: coordinate key and name key never coincide  200 mismatch rows, 0 collisions
+  PASS  H8: stage 1 and stage 2 used the same images  200 vs 200
+  PASS  H8: stage 1 ran only mismatch arms  ['grid_mismatch', 'percent_mismatch']
+  PASS  H8: stage 2 ran only plain arms  ['grid', 'percent']
+
+----------------------------------------------------------------------------
+9. THE QUANTISATION CONTROL really ran at a different precision
+----------------------------------------------------------------------------
+  PASS  8-bit run log mentions 8-bit loading  searched the run log
+  PASS  4-bit and 8-bit give DIFFERENT answers (so precision really changed)  answers agree on 82.5% of 200 images
+
+----------------------------------------------------------------------------
+RESULT
+----------------------------------------------------------------------------
+  all checks passed (0 warnings)

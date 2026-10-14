@@ -1,0 +1,27 @@
+GATE SENSITIVITY  control margin over chance, per model
+------------------------------------------------------------------------------
+color task (word rung over 1/K chance):
+  Qwen3-VL-4B*               margin  67.7  penalty
+  Qwen2_5-VL-7B-Instruct     margin  48.1  penalty
+  InternVL3-2B-hf            margin  38.2  penalty
+  llava-1_5-7b-hf            margin  20.8  no penalty / null
+  SmolVLM-Instruct           margin  12.9  no penalty / null
+  set of penalty models unchanged for every threshold from 0 to 38.2; non-penalty models enter or leave at 12.9, 20.8
+COCO locate (cell-name accuracy over 1/9 chance):
+  Gemini                     margin  83.4  penalty
+  Qwen3-VL-4B                margin  57.4  penalty
+  Qwen2.5-VL-7B              margin  56.9  no penalty / null
+  InternVL3-2B               margin  34.9  penalty
+  GPT-4o                     margin  27.9  no penalty / null
+  set of penalty models unchanged for every threshold from 0 to 34.9; non-penalty models leave at 27.9, 56.9
+
+CROSS-INSTRUMENT AGREEMENT  first-token argmax vs generate-and-parse, visible trials
+------------------------------------------------------------------------------
+  InternVL3-2B-hf            label    n= 71  agree 100.0%
+  InternVL3-2B-hf            numeric  n= 71  agree 100.0%
+  InternVL3-2B-hf            word     n= 71  agree 100.0%
+  Qwen2_5-VL-7B-Instruct     label    n= 71  agree 100.0%
+  Qwen2_5-VL-7B-Instruct     numeric  n= 71  agree 100.0%
+  Qwen2_5-VL-7B-Instruct     word     n= 71  agree 100.0%
+  SmolVLM-Instruct           word     n= 71  agree  97.2%
+  llava-1_5-7b-hf            word     n= 48  agree 100.0%

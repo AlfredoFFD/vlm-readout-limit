@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "vwm-readout"
+version = "1.0.0"
+description = "Code and per-trial data for arXiv:2609.27408, 'What Looks Like a Capability Limit in Vision-Language Models Is a Readout Limit'"
+authors = [{ name = "Alfredo F. Frontera Del Valle" }]
+readme = "README.md"
+requires-python = ">=3.11,<3.13"
+license = { text = "MIT" }
+dependencies = []
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["vwm*"]
+exclude = ["tests*", "paper*", "results*", "scripts*"]
+
+[tool.ruff]
+line-length = 110
+target-version = "py311"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

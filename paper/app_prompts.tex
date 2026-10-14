@@ -1,0 +1,98 @@
+\section{Prompt templates, option order, gate sensitivity, and instrument agreement}
+\label{app:prompts}
+
+\paragraph{Real photographs.} Every prompt is one turn of text under the image.
+The examples below are the verbatim prompts for one image (COCO 139, $640\times426$),
+taken from the logs. The nine cells are listed in an order fixed per image and
+identical across conventions.
+
+{\small\ttfamily\raggedright
+\textbf{cell name, locate.} In this image, the microwave is at one of these
+positions: 1=center, 2=bottom-right, 3=middle-left, 4=top-right, 5=top-center,
+6=middle-right, 7=bottom-center, 8=top-left, 9=bottom-left. Which one? Answer
+with a single integer 1 to 9 and nothing else.
+
+\textbf{absolute pixels, locate.} Positions are given as (x, y) pixel
+coordinates in this 640 by 426 image, where (0, 0) is the top-left corner and x
+increases to the right and y increases downward. In this image, the microwave is
+at one of these positions: 1=(320, 213), 2=(533, 355), 3=(106, 213), 4=(533, 71),
+5=(320, 71), 6=(533, 213), 7=(320, 355), 8=(106, 71), 9=(106, 355). Which one?
+Answer with a single integer 1 to 9 and nothing else.
+
+\textbf{normalized, locate.} Positions are given as (x, y) coordinates
+normalized to a 0 to 999 range, where (0, 0) is the top-left corner and x
+increases to the right and y increases downward. In this image, the microwave is
+at one of these positions: 1=(500, 500), 2=(833, 833), 3=(166, 500),
+4=(833, 167), 5=(500, 167), 6=(833, 500), 7=(500, 833), 8=(166, 167),
+9=(166, 833). Which one? Answer with a single integer 1 to 9 and nothing else.
+
+\textbf{glossed pixels, locate.} [same preamble] \ldots{} 1=(320, 213) [center],
+2=(533, 355) [bottom-right], 3=(106, 213) [middle-left], \ldots
+
+\textbf{mispaired pixels, locate.} [same preamble] \ldots{} 1=(320, 213)
+[middle-left], 2=(533, 355) [top-right], 3=(106, 213) [top-left], \ldots
+
+\textbf{cell name, identify (coordinate on the question side).} In this
+image, what object is at position middle-right? It is one of these: 1=fork,
+2=kite, 3=bottle, 4=microwave, 5=baseball glove, 6=donut. Answer with a single
+integer 1 to 6 and nothing else.
+
+\textbf{absolute pixels, identify.} [same preamble] In this image, what object
+is at position (533, 213)? It is one of these: 1=fork, 2=kite, 3=bottle,
+4=microwave, 5=baseball glove, 6=donut. Answer with a single integer 1 to 6 and
+nothing else.
+\par}
+
+\paragraph{Color ladder.} Templates, with the slots the harness fills in
+braces. \{where\} is a position word such as bottom-center; \{options\} is the
+$K$ calibrated words in the trial's order; \{which\} is ``Which of these is it
+closest to?'' on held-out angles; \{angle\} is the model's own calibrated angle
+for each word (Table~\ref{tab:models}).
+
+{\small\ttfamily\raggedright
+\textbf{word.} In the array you memorized, the square at the \{where\} of the
+image was one of these colors: \{options\}. \{which\} Answer with a single color
+word and nothing else.
+
+\textbf{label.} \ldots{} one of these colors: 1=\{option 1\}, 2=\{option 2\},
+\ldots{} \{which\} Answer with a single integer 1 to \{K\} and nothing else.
+
+\textbf{numeric.} Colors are described by a hue angle from 0 to 359 on a color
+wheel where \{angle\} is \{word\}, \ldots{} In the array you memorized, the
+square at the \{where\} of the image had one of these hues: 1=\{angle 1\},
+2=\{angle 2\}, \ldots{} \{which\} Answer with a single integer 1 to \{K\} and
+nothing else.
+
+\textbf{numeric, bare.} As numeric without the legend sentence.
+
+\textbf{numeric, glossed.} \ldots{} had one of these hues: 1=\{angle 1\}
+(\{word 1\}), 2=\{angle 2\} (\{word 2\}), \ldots
+
+\textbf{numeric, mispaired.} As glossed, with the words permuted so that no
+angle carries its own word.
+\par}
+
+\paragraph{Option order.} For each trial the order of the alternatives is a
+deterministic permutation seeded by a hash of the trial identifier, so it is
+random across trials and identical across conventions for the same trial. The
+mispaired gloss is a derangement of the same seed, a permutation with no fixed
+point, so no option is ever correctly glossed by chance. Orders were not
+re-sampled; the paired design removes order effects from every within-item
+contrast, and the selection-bias literature (\S\ref{sec:related}) is the place
+to look for their marginal size.
+
+\paragraph{Gate sensitivity.} The gate admits a model whose control condition
+is at least 20 points over chance. On the color task the models showing the
+penalty clear it by $38.2$ to $67.7$ points, so the set of penalty models is the
+same for every threshold from $0$ to $38.2$; only the denominator moves. LLaVA
+(null contrast) leaves above $20.8$ and SmolVLM (null contrast) enters below
+$12.9$. On the photographs the penalty models clear by $34.9$ to $83.4$ and the
+set is unchanged for any threshold up to $34.9$; GPT-4o (null) leaves above
+$27.9$. No conclusion in the paper depends on the value 20.
+
+\paragraph{Instrument agreement.} For every local model the crossmodel logs
+hold both readouts on every visible trial. First-token argmax and the parsed
+generation agree on $100.0\%$ of trials for Qwen2.5-VL-7B and InternVL3-2B on all
+three rungs ($n=71$ each), on $100.0\%$ for LLaVA on the word rung ($n=48$), and
+on $97.2\%$ for SmolVLM on the word rung ($n=71$; two trials). SmolVLM fails the
+gate and contributes no contrast.

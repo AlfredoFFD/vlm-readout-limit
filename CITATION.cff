@@ -1,0 +1,27 @@
+cff-version: 1.2.0
+message: "If you use this code or its data, please cite the paper."
+title: "What Looks Like a Capability Limit in Vision-Language Models Is a Readout Limit"
+authors:
+  - family-names: "Frontera Del Valle"
+    given-names: "Alfredo F."
+    affiliation: "Columbia University"
+license: MIT
+type: software
+identifiers:
+  - type: other
+    value: "arXiv:2609.27408"
+    description: "arXiv preprint"
+preferred-citation:
+  type: article
+  title: "What Looks Like a Capability Limit in Vision-Language Models Is a Readout Limit"
+  authors:
+    - family-names: "Frontera Del Valle"
+      given-names: "Alfredo F."
+      affiliation: "Columbia University"
+  year: 2026
+  month: 9
+  journal: "arXiv preprint"
+  identifiers:
+    - type: other
+      value: "arXiv:2609.27408"
+  url: "https://arxiv.org/abs/2609.27408"

@@ -1,0 +1,1045 @@
+{
+ "model": "Qwen/Qwen2.5-VL-7B-Instruct",
+ "step": 5,
+ "table": {
+  "0": {
+   "names": [
+    "pink",
+    "pink",
+    "pink"
+   ],
+   "modal": "pink",
+   "agree": 1.0,
+   "rgb": [
+    235,
+    144,
+    172
+   ]
+  },
+  "5": {
+   "names": [
+    "pink",
+    "pink",
+    "pink"
+   ],
+   "modal": "pink",
+   "agree": 1.0,
+   "rgb": [
+    237,
+    144,
+    167
+   ]
+  },
+  "10": {
+   "names": [
+    "pink",
+    "pink",
+    "pink"
+   ],
+   "modal": "pink",
+   "agree": 1.0,
+   "rgb": [
+    238,
+    144,
+    161
+   ]
+  },
+  "15": {
+   "names": [
+    "pink",
+    "pink",
+    "pink"
+   ],
+   "modal": "pink",
+   "agree": 1.0,
+   "rgb": [
+    239,
+    145,
+    155
+   ]
+  },
+  "20": {
+   "names": [
+    "red",
+    "pink",
+    "red"
+   ],
+   "modal": "red",
+   "agree": 0.6666666666666666,
+   "rgb": [
+    239,
+    145,
+    149
+   ]
+  },
+  "25": {
+   "names": [
+    "red",
+    "pink",
+    "red"
+   ],
+   "modal": "red",
+   "agree": 0.6666666666666666,
+   "rgb": [
+    238,
+    146,
+    144
+   ]
+  },
+  "30": {
+   "names": [
+    "red",
+    "red",
+    "red"
+   ],
+   "modal": "red",
+   "agree": 1.0,
+   "rgb": [
+    237,
+    147,
+    138
+   ]
+  },
+  "35": {
+   "names": [
+    "red",
+    "pink",
+    "red"
+   ],
+   "modal": "red",
+   "agree": 0.6666666666666666,
+   "rgb": [
+    236,
+    148,
+    133
+   ]
+  },
+  "40": {
+   "names": [
+    "orange",
+    "pink",
+    "orange"
+   ],
+   "modal": "orange",
+   "agree": 0.6666666666666666,
+   "rgb": [
+    234,
+    150,
+    128
+   ]
+  },
+  "45": {
+   "names": [
+    "orange",
+    "orange",
+    "orange"
+   ],
+   "modal": "orange",
+   "agree": 1.0,
+   "rgb": [
+    231,
+    151,
+    124
+   ]
+  },
+  "50": {
+   "names": [
+    "orange",
+    "orange",
+    "orange"
+   ],
+   "modal": "orange",
+   "agree": 1.0,
+   "rgb": [
+    228,
+    153,
+    120
+   ]
+  },
+  "55": {
+   "names": [
+    "orange",
+    "orange",
+    "orange"
+   ],
+   "modal": "orange",
+   "agree": 1.0,
+   "rgb": [
+    225,
+    155,
+    116
+   ]
+  },
+  "60": {
+   "names": [
+    "orange",
+    "orange",
+    "orange"
+   ],
+   "modal": "orange",
+   "agree": 1.0,
+   "rgb": [
+    222,
+    157,
+    112
+   ]
+  },
+  "65": {
+   "names": [
+    "orange",
+    "orange",
+    "orange"
+   ],
+   "modal": "orange",
+   "agree": 1.0,
+   "rgb": [
+    218,
+    159,
+    109
+   ]
+  },
+  "70": {
+   "names": [
+    "brown",
+    "orange",
+    "brown"
+   ],
+   "modal": "brown",
+   "agree": 0.6666666666666666,
+   "rgb": [
+    213,
+    161,
+    107
+   ]
+  },
+  "75": {
+   "names": [
+    "brown",
+    "brown",
+    "brown"
+   ],
+   "modal": "brown",
+   "agree": 1.0,
+   "rgb": [
+    209,
+    163,
+    105
+   ]
+  },
+  "80": {
+   "names": [
+    "brown",
+    "brown",
+    "brown"
+   ],
+   "modal": "brown",
+   "agree": 1.0,
+   "rgb": [
+    204,
+    165,
+    103
+   ]
+  },
+  "85": {
+   "names": [
+    "brown",
+    "brown",
+    "brown"
+   ],
+   "modal": "brown",
+   "agree": 1.0,
+   "rgb": [
+    199,
+    167,
+    102
+   ]
+  },
+  "90": {
+   "names": [
+    "yellow",
+    "yellow",
+    "yellow"
+   ],
+   "modal": "yellow",
+   "agree": 1.0,
+   "rgb": [
+    194,
+    169,
+    101
+   ]
+  },
+  "95": {
+   "names": [
+    "yellow",
+    "yellow",
+    "yellow"
+   ],
+   "modal": "yellow",
+   "agree": 1.0,
+   "rgb": [
+    188,
+    171,
+    102
+   ]
+  },
+  "100": {
+   "names": [
+    "yellow",
+    "yellow",
+    "yellow"
+   ],
+   "modal": "yellow",
+   "agree": 1.0,
+   "rgb": [
+    182,
+    173,
+    102
+   ]
+  },
+  "105": {
+   "names": [
+    "yellow",
+    "yellow",
+    "yellow"
+   ],
+   "modal": "yellow",
+   "agree": 1.0,
+   "rgb": [
+    177,
+    175,
+    103
+   ]
+  },
+  "110": {
+   "names": [
+    "green",
+    "green",
+    "green"
+   ],
+   "modal": "green",
+   "agree": 1.0,
+   "rgb": [
+    170,
+    176,
+    105
+   ]
+  },
+  "115": {
+   "names": [
+    "green",
+    "green",
+    "green"
+   ],
+   "modal": "green",
+   "agree": 1.0,
+   "rgb": [
+    164,
+    178,
+    107
+   ]
+  },
+  "120": {
+   "names": [
+    "green",
+    "green",
+    "green"
+   ],
+   "modal": "green",
+   "agree": 1.0,
+   "rgb": [
+    158,
+    179,
+    110
+   ]
+  },
+  "125": {
+   "names": [
+    "green",
+    "green",
+    "green"
+   ],
+   "modal": "green",
+   "agree": 1.0,
+   "rgb": [
+    151,
+    181,
+    113
+   ]
+  },
+  "130": {
+   "names": [
+    "green",
+    "green",
+    "green"
+   ],
+   "modal": "green",
+   "agree": 1.0,
+   "rgb": [
+    145,
+    182,
+    117
+   ]
+  },
+  "135": {
+   "names": [
+    "green",
+    "green",
+    "green"
+   ],
+   "modal": "green",
+   "agree": 1.0,
+   "rgb": [
+    138,
+    183,
+    121
+   ]
+  },
+  "140": {
+   "names": [
+    "green",
+    "green",
+    "green"
+   ],
+   "modal": "green",
+   "agree": 1.0,
+   "rgb": [
+    131,
+    184,
+    126
+   ]
+  },
+  "145": {
+   "names": [
+    "green",
+    "green",
+    "green"
+   ],
+   "modal": "green",
+   "agree": 1.0,
+   "rgb": [
+    124,
+    185,
+    130
+   ]
+  },
+  "150": {
+   "names": [
+    "green",
+    "green",
+    "green"
+   ],
+   "modal": "green",
+   "agree": 1.0,
+   "rgb": [
+    117,
+    186,
+    135
+   ]
+  },
+  "155": {
+   "names": [
+    "green",
+    "green",
+    "green"
+   ],
+   "modal": "green",
+   "agree": 1.0,
+   "rgb": [
+    109,
+    187,
+    141
+   ]
+  },
+  "160": {
+   "names": [
+    "green",
+    "green",
+    "green"
+   ],
+   "modal": "green",
+   "agree": 1.0,
+   "rgb": [
+    102,
+    188,
+    146
+   ]
+  },
+  "165": {
+   "names": [
+    "green",
+    "green",
+    "green"
+   ],
+   "modal": "green",
+   "agree": 1.0,
+   "rgb": [
+    94,
+    188,
+    152
+   ]
+  },
+  "170": {
+   "names": [
+    "green",
+    "green",
+    "green"
+   ],
+   "modal": "green",
+   "agree": 1.0,
+   "rgb": [
+    86,
+    189,
+    158
+   ]
+  },
+  "175": {
+   "names": [
+    "green",
+    "teal",
+    "green"
+   ],
+   "modal": "green",
+   "agree": 0.6666666666666666,
+   "rgb": [
+    78,
+    189,
+    164
+   ]
+  },
+  "180": {
+   "names": [
+    "teal",
+    "teal",
+    "teal"
+   ],
+   "modal": "teal",
+   "agree": 1.0,
+   "rgb": [
+    69,
+    189,
+    170
+   ]
+  },
+  "185": {
+   "names": [
+    "teal",
+    "teal",
+    "teal"
+   ],
+   "modal": "teal",
+   "agree": 1.0,
+   "rgb": [
+    60,
+    190,
+    176
+   ]
+  },
+  "190": {
+   "names": [
+    "teal",
+    "teal",
+    "teal"
+   ],
+   "modal": "teal",
+   "agree": 1.0,
+   "rgb": [
+    51,
+    190,
+    182
+   ]
+  },
+  "195": {
+   "names": [
+    "teal",
+    "blue",
+    "teal"
+   ],
+   "modal": "teal",
+   "agree": 0.6666666666666666,
+   "rgb": [
+    42,
+    190,
+    188
+   ]
+  },
+  "200": {
+   "names": [
+    "blue",
+    "blue",
+    "blue"
+   ],
+   "modal": "blue",
+   "agree": 1.0,
+   "rgb": [
+    33,
+    189,
+    193
+   ]
+  },
+  "205": {
+   "names": [
+    "blue",
+    "blue",
+    "blue"
+   ],
+   "modal": "blue",
+   "agree": 1.0,
+   "rgb": [
+    24,
+    189,
+    199
+   ]
+  },
+  "210": {
+   "names": [
+    "blue",
+    "blue",
+    "blue"
+   ],
+   "modal": "blue",
+   "agree": 1.0,
+   "rgb": [
+    17,
+    189,
+    204
+   ]
+  },
+  "215": {
+   "names": [
+    "blue",
+    "blue",
+    "blue"
+   ],
+   "modal": "blue",
+   "agree": 1.0,
+   "rgb": [
+    14,
+    188,
+    210
+   ]
+  },
+  "220": {
+   "names": [
+    "blue",
+    "blue",
+    "blue"
+   ],
+   "modal": "blue",
+   "agree": 1.0,
+   "rgb": [
+    18,
+    187,
+    214
+   ]
+  },
+  "225": {
+   "names": [
+    "blue",
+    "blue",
+    "blue"
+   ],
+   "modal": "blue",
+   "agree": 1.0,
+   "rgb": [
+    26,
+    187,
+    219
+   ]
+  },
+  "230": {
+   "names": [
+    "blue",
+    "blue",
+    "blue"
+   ],
+   "modal": "blue",
+   "agree": 1.0,
+   "rgb": [
+    36,
+    186,
+    223
+   ]
+  },
+  "235": {
+   "names": [
+    "blue",
+    "blue",
+    "blue"
+   ],
+   "modal": "blue",
+   "agree": 1.0,
+   "rgb": [
+    47,
+    185,
+    227
+   ]
+  },
+  "240": {
+   "names": [
+    "blue",
+    "blue",
+    "blue"
+   ],
+   "modal": "blue",
+   "agree": 1.0,
+   "rgb": [
+    58,
+    184,
+    230
+   ]
+  },
+  "245": {
+   "names": [
+    "blue",
+    "blue",
+    "blue"
+   ],
+   "modal": "blue",
+   "agree": 1.0,
+   "rgb": [
+    68,
+    182,
+    233
+   ]
+  },
+  "250": {
+   "names": [
+    "blue",
+    "blue",
+    "blue"
+   ],
+   "modal": "blue",
+   "agree": 1.0,
+   "rgb": [
+    79,
+    181,
+    235
+   ]
+  },
+  "255": {
+   "names": [
+    "blue",
+    "blue",
+    "blue"
+   ],
+   "modal": "blue",
+   "agree": 1.0,
+   "rgb": [
+    90,
+    180,
+    237
+   ]
+  },
+  "260": {
+   "names": [
+    "blue",
+    "blue",
+    "blue"
+   ],
+   "modal": "blue",
+   "agree": 1.0,
+   "rgb": [
+    100,
+    178,
+    238
+   ]
+  },
+  "265": {
+   "names": [
+    "blue",
+    "blue",
+    "blue"
+   ],
+   "modal": "blue",
+   "agree": 1.0,
+   "rgb": [
+    111,
+    176,
+    239
+   ]
+  },
+  "270": {
+   "names": [
+    "blue",
+    "blue",
+    "blue"
+   ],
+   "modal": "blue",
+   "agree": 1.0,
+   "rgb": [
+    121,
+    174,
+    240
+   ]
+  },
+  "275": {
+   "names": [
+    "blue",
+    "blue",
+    "blue"
+   ],
+   "modal": "blue",
+   "agree": 1.0,
+   "rgb": [
+    130,
+    173,
+    239
+   ]
+  },
+  "280": {
+   "names": [
+    "blue",
+    "blue",
+    "blue"
+   ],
+   "modal": "blue",
+   "agree": 1.0,
+   "rgb": [
+    140,
+    171,
+    239
+   ]
+  },
+  "285": {
+   "names": [
+    "blue",
+    "blue",
+    "blue"
+   ],
+   "modal": "blue",
+   "agree": 1.0,
+   "rgb": [
+    149,
+    169,
+    238
+   ]
+  },
+  "290": {
+   "names": [
+    "blue",
+    "blue",
+    "blue"
+   ],
+   "modal": "blue",
+   "agree": 1.0,
+   "rgb": [
+    158,
+    166,
+    236
+   ]
+  },
+  "295": {
+   "names": [
+    "purple",
+    "purple",
+    "purple"
+   ],
+   "modal": "purple",
+   "agree": 1.0,
+   "rgb": [
+    167,
+    164,
+    234
+   ]
+  },
+  "300": {
+   "names": [
+    "purple",
+    "purple",
+    "purple"
+   ],
+   "modal": "purple",
+   "agree": 1.0,
+   "rgb": [
+    175,
+    162,
+    231
+   ]
+  },
+  "305": {
+   "names": [
+    "purple",
+    "purple",
+    "purple"
+   ],
+   "modal": "purple",
+   "agree": 1.0,
+   "rgb": [
+    183,
+    160,
+    228
+   ]
+  },
+  "310": {
+   "names": [
+    "purple",
+    "purple",
+    "purple"
+   ],
+   "modal": "purple",
+   "agree": 1.0,
+   "rgb": [
+    190,
+    158,
+    224
+   ]
+  },
+  "315": {
+   "names": [
+    "purple",
+    "purple",
+    "purple"
+   ],
+   "modal": "purple",
+   "agree": 1.0,
+   "rgb": [
+    197,
+    156,
+    220
+   ]
+  },
+  "320": {
+   "names": [
+    "purple",
+    "purple",
+    "purple"
+   ],
+   "modal": "purple",
+   "agree": 1.0,
+   "rgb": [
+    203,
+    154,
+    216
+   ]
+  },
+  "325": {
+   "names": [
+    "purple",
+    "purple",
+    "purple"
+   ],
+   "modal": "purple",
+   "agree": 1.0,
+   "rgb": [
+    209,
+    152,
+    211
+   ]
+  },
+  "330": {
+   "names": [
+    "pink",
+    "purple",
+    "purple"
+   ],
+   "modal": "purple",
+   "agree": 0.6666666666666666,
+   "rgb": [
+    214,
+    150,
+    206
+   ]
+  },
+  "335": {
+   "names": [
+    "pink",
+    "pink",
+    "pink"
+   ],
+   "modal": "pink",
+   "agree": 1.0,
+   "rgb": [
+    219,
+    149,
+    201
+   ]
+  },
+  "340": {
+   "names": [
+    "pink",
+    "pink",
+    "pink"
+   ],
+   "modal": "pink",
+   "agree": 1.0,
+   "rgb": [
+    224,
+    147,
+    195
+   ]
+  },
+  "345": {
+   "names": [
+    "pink",
+    "pink",
+    "pink"
+   ],
+   "modal": "pink",
+   "agree": 1.0,
+   "rgb": [
+    227,
+    146,
+    190
+   ]
+  },
+  "350": {
+   "names": [
+    "pink",
+    "pink",
+    "pink"
+   ],
+   "modal": "pink",
+   "agree": 1.0,
+   "rgb": [
+    231,
+    145,
+    184
+   ]
+  },
+  "355": {
+   "names": [
+    "pink",
+    "pink",
+    "pink"
+   ],
+   "modal": "pink",
+   "agree": 1.0,
+   "rgb": [
+    233,
+    145,
+    178
+   ]
+  }
+ },
+ "named": [
+  {
+   "wheel": 55,
+   "name": "orange"
+  },
+  {
+   "wheel": 100,
+   "name": "yellow"
+  },
+  {
+   "wheel": 140,
+   "name": "green"
+  },
+  {
+   "wheel": 185,
+   "name": "teal"
+  },
+  {
+   "wheel": 245,
+   "name": "blue"
+  },
+  {
+   "wheel": 340,
+   "name": "pink"
+  }
+ ],
+ "yield": {
+  "stable_angles": 47,
+  "stable_names": 8,
+  "anchors": 6
+ }
+}

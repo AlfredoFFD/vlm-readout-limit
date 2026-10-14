@@ -1,0 +1,7 @@
+4x4 cellname 26.0
+4x4 pixel 7.5
+4x4 gap -18.5 p=3.0e-06 chance 6.25
+calibration-angle word visible 99.2
+calibration-angle label visible 97.9
+gemini parseable gap -11.1 p=1.0e-04
+gemini unparseable cellname 0.0 pixel 5.5

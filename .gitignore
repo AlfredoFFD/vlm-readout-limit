@@ -1,0 +1,41 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+.ruff_cache/
+
+# Secrets: API keys are read from the environment only
+.env
+.env.*
+
+# Model weights and caches
+hf_cache/
+.cache/
+*.safetensors
+*.bin
+*.pt
+*.pth
+
+# Images the experiment drivers write next to their logs (regenerated from seed)
+results/**/_*imgs*/
+results/**/_cp_imgs/
+
+# LaTeX build output (main.bbl is part of the arXiv source and is kept)
+paper/*.aux
+paper/*.log
+paper/*.out
+paper/*.blg
+paper/*.fls
+paper/*.fdb_latexmk
+paper/*.synctex.gz
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

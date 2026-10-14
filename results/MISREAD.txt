@@ -1,0 +1,24 @@
+MISREAD  does the model read the other convention's numbers in its own units?
+==============================================================================
+model            condition  misread       n  target%  misread%  bias-null%    p(>1/K)
+Qwen2.5-VL-7B    norm1000   as_pixels   200      5.0      53.0        11.8    7.8e-48
+                 misread-predicted slot coincides with the true target on 2.5% of trials
+                 excluding those: n=195, misread 54.4%, bias-null 11.9%, p(>1/K) 3.0e-49
+Qwen3-VL-4B      pixel      as_norm1000  200     20.0      28.0        11.4    4.6e-11
+                 misread-predicted slot coincides with the true target on 11.0% of trials
+                 excluding those: n=178, misread 26.4%, bias-null 11.6%, p(>1/K) 1.2e-08
+InternVL3-2B     norm1000   as_pixels   200     19.0      10.5        10.2    6.4e-01
+                 misread-predicted slot coincides with the true target on 2.5% of trials
+                 excluding those: n=195, misread 10.8%, bias-null 10.2%, p(>1/K) 5.9e-01
+Gemini (pixel)   pixel      as_norm1000  189     83.6      16.4        11.0    1.8e-02
+                 misread-predicted slot coincides with the true target on 11.1% of trials
+                 excluding those: n=168, misread 6.0%, bias-null 10.9%, p(>1/K) 9.9e-01
+Gemini (norm)    norm1000   as_pixels   196     95.9       2.0        11.2    1.0e+00
+                 misread-predicted slot coincides with the true target on 2.0% of trials
+                 excluding those: n=192, misread 0.0%, bias-null 11.2%, p(>1/K) 1.0e+00
+GPT-4o (pixel)   pixel      as_norm1000  184     37.0       8.7        11.3    8.8e-01
+                 misread-predicted slot coincides with the true target on 10.9% of trials
+                 excluding those: n=164, misread 6.7%, bias-null 11.5%, p(>1/K) 9.8e-01
+GPT-4o (norm)    norm1000   as_pixels   177     24.9      16.4        11.0    2.1e-02
+                 misread-predicted slot coincides with the true target on 2.3% of trials
+                 excluding those: n=173, misread 15.0%, bias-null 10.9%, p(>1/K) 6.9e-02

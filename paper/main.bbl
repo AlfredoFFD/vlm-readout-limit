@@ -1,0 +1,138 @@
+\begin{thebibliography}{19}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Atabuzzaman et~al.(2025)Atabuzzaman, Asgarov, and
+  Thomas]{lvlmselectionbias2025}
+Md. Atabuzzaman, Ali Asgarov, and Chris Thomas.
+\newblock Benchmarking and mitigating {MCQA} selection bias of large
+  vision-language models.
+\newblock In \emph{Empirical Methods in Natural Language Processing ({EMNLP})},
+  2025.
+
+\bibitem[Bai et~al.(2025)Bai, Chen, Liu, Wang, Ge, Song, Dang, Wang, Wang,
+  Tang, et~al.]{qwen25vl2025}
+Shuai Bai, Keqin Chen, Xuejing Liu, Jialin Wang, Wenbin Ge, Sibo Song, Kai
+  Dang, Peng Wang, Shijie Wang, Jun Tang, et~al.
+\newblock {Qwen2.5-VL} technical report.
+\newblock \emph{arXiv preprint arXiv:2502.13923}, 2025.
+
+\bibitem[Bays \& Husain(2008)Bays and Husain]{bayshusain2008}
+Paul~M. Bays and Masud Husain.
+\newblock Dynamic shifts of limited working memory resources in human vision.
+\newblock \emph{Science}, 321:\penalty0 851--854, 2008.
+
+\bibitem[Cappelletti et~al.(2025)Cappelletti, Poppi, Poppi, Yong, Garcia-Olano,
+  Cornia, Baraldi, and Cucchiara]{prefill2025}
+Silvia Cappelletti, Tobia Poppi, Samuele Poppi, Zheng-Xin Yong, Diego
+  Garcia-Olano, Marcella Cornia, Lorenzo Baraldi, and Rita Cucchiara.
+\newblock Improving {LLM} first-token predictions in multiple-choice question
+  answering via output prefilling.
+\newblock \emph{arXiv preprint arXiv:2505.15323}, 2025.
+
+\bibitem[Cheng et~al.(2025)Cheng, Duan, Wang, Fang, Li, Huang, Wang, Eftekhar,
+  et~al.]{pointarena2025}
+Long Cheng, Jiafei Duan, Yi~Ru Wang, Haoquan Fang, Boyang Li, Yushan Huang,
+  Elvis Wang, Ainaz Eftekhar, et~al.
+\newblock {PointArena}: Probing multimodal grounding through language-guided
+  pointing.
+\newblock \emph{arXiv preprint arXiv:2505.09990}, 2025.
+
+\bibitem[Lan et~al.(2026)Lan, Sun, Walter, and Zhou]{seeingwithoutlooking2026}
+Zixuan Lan, Luzhe Sun, Matthew~R. Walter, and Jiawei Zhou.
+\newblock Seeing without looking: Do vision-language benchmarks really test
+  vision?
+\newblock \emph{arXiv preprint arXiv:2605.22903}, 2026.
+
+\bibitem[Lin et~al.(2014)Lin, Maire, Belongie, Hays, Perona, Ramanan,
+  Doll{\'a}r, and Zitnick]{coco2014}
+Tsung-Yi Lin, Michael Maire, Serge Belongie, James Hays, Pietro Perona, Deva
+  Ramanan, Piotr Doll{\'a}r, and C.~Lawrence Zitnick.
+\newblock Microsoft {COCO}: Common objects in context.
+\newblock In \emph{European Conference on Computer Vision ({ECCV})}, 2014.
+
+\bibitem[Liu et~al.(2024)Liu, Duan, Zhang, Li, Zhang, Zhao, Yuan, Wang, He,
+  Liu, Chen, and Lin]{mmbench2024}
+Yuan Liu, Haodong Duan, Yuanhan Zhang, Bo~Li, Songyang Zhang, Wangbo Zhao, Yike
+  Yuan, Jiaqi Wang, Conghui He, Ziwei Liu, Kai Chen, and Dahua Lin.
+\newblock {MMBench}: Is your multi-modal model an all-around player?
+\newblock In \emph{European Conference on Computer Vision ({ECCV})}, 2024.
+
+\bibitem[{Qwen Team}(2025)]{qwen3vl2025}
+{Qwen Team}.
+\newblock {Qwen3-VL} technical report.
+\newblock \emph{arXiv preprint arXiv:2511.21631}, 2025.
+
+\bibitem[Rasheed et~al.(2024)Rasheed, Maaz, Shaji, Shaker, Khan, Cholakkal,
+  Anwer, Xing, Yang, and Khan]{glamm2024}
+Hanoona Rasheed, Muhammad Maaz, Sahal Shaji, Abdelrahman Shaker, Salman Khan,
+  Hisham Cholakkal, Rao~M. Anwer, Eric Xing, Ming-Hsuan Yang, and Fahad~S.
+  Khan.
+\newblock {GLaMM}: Pixel grounding large multimodal model.
+\newblock In \emph{Computer Vision and Pattern Recognition ({CVPR})}, 2024.
+
+\bibitem[Singla et~al.(2026)Singla, Garg, Singh, and Chopra]{seeorguess2026}
+Pratham Singla, Shivank Garg, Vihan Singh, and Paras Chopra.
+\newblock Do vision-language models see or guess? measuring and reducing
+  textual-prior reliance with a phrasing-controlled benchmark.
+\newblock \emph{arXiv preprint arXiv:2606.10400}, 2026.
+
+\bibitem[Wang et~al.(2026{\natexlab{a}})Wang, Liu, Kuang, Wei, Liu, Li, Man,
+  Chen, Tao, Liu, Kautz, Zhang, and Yu]{locateanything2026}
+Shihao Wang, Shilong Liu, Yuanguo Kuang, Xinyu Wei, Yangzhou Liu, Zhiqi Li,
+  Yunze Man, Guo Chen, Andrew Tao, Guilin Liu, Jan Kautz, Lei Zhang, and
+  Zhiding Yu.
+\newblock {LocateAnything}: Fast and high-quality vision-language grounding
+  with parallel box decoding.
+\newblock \emph{arXiv preprint arXiv:2605.27365}, 2026{\natexlab{a}}.
+
+\bibitem[Wang et~al.(2025)Wang, Zhang, Masry, Pal, Gella, Liu, and
+  Taslakian]{ruler2025}
+Suyuchen Wang, Tianyu Zhang, Ahmed Masry, Christopher Pal, Spandana Gella, Bang
+  Liu, and Perouz Taslakian.
+\newblock Improving {GUI} grounding with explicit position-to-coordinate
+  mapping.
+\newblock \emph{arXiv preprint arXiv:2510.03230}, 2025.
+
+\bibitem[Wang et~al.(2026{\natexlab{b}})Wang, Yao, Pan, Zhou, Liu, Zhang, and
+  Zhang]{provise2026}
+Xu~Wang, Kaixiang Yao, Miao Pan, Xiaohe Zhou, Xuanyu Liu, Wenqi Zhang, and
+  Xuhong Zhang.
+\newblock Show, don't tell: Evaluating spatial cognition in generative pixels
+  rather than {LLM} text.
+\newblock \emph{arXiv preprint arXiv:2607.21072}, 2026{\natexlab{b}}.
+
+\bibitem[Wu et~al.(2025)Wu, Cheng, Yang, Zhang, Yang, Jiang, Mu, Peng, Qiao,
+  Tan, et~al.]{guiactor2025}
+Qianhui Wu, Kanzhi Cheng, Rui Yang, Chaoyun Zhang, Jianwei Yang, Huiqiang
+  Jiang, Jian Mu, Baolin Peng, Bo~Qiao, Reuben Tan, et~al.
+\newblock {GUI-Actor}: Coordinate-free visual grounding for {GUI} agents.
+\newblock \emph{arXiv preprint arXiv:2506.03143}, 2025.
+
+\bibitem[Yuan et~al.(2026)Yuan, Ruan, Xiong, Zhao, Liu, and Fu]{mmgist2026}
+Wenzhen Yuan, Jiacheng Ruan, Wutao Xiong, Chengping Zhao, Ting Liu, and Yuzhuo
+  Fu.
+\newblock {MMGist}: A comprehensive multimodal benchmark for 2027.
+\newblock \emph{arXiv preprint arXiv:2606.22437}, 2026.
+
+\bibitem[Zhang \& Luck(2008)Zhang and Luck]{zhangluck2008}
+Weiwei Zhang and Steven~J. Luck.
+\newblock Discrete fixed-resolution representations in visual working memory.
+\newblock \emph{Nature}, 453:\penalty0 233--235, 2008.
+
+\bibitem[Zheng et~al.(2024)Zheng, Zhou, Meng, Zhou, and Huang]{pride2024}
+Chujie Zheng, Hao Zhou, Fandong Meng, Jie Zhou, and Minlie Huang.
+\newblock Large language models are not robust multiple choice selectors.
+\newblock In \emph{International Conference on Learning Representations
+  ({ICLR})}, 2024.
+
+\bibitem[Zhu et~al.(2026)Zhu, Lu, Wu, Jiao, Du, Zhang, and Xue]{ioupd2026}
+Xiuyuan Zhu, Ke~Lu, Hao Wu, Siwen Jiao, Zijin Du, Dongming Zhang, and Jian Xue.
+\newblock {IoU-PD}: {IoU}-aware privileged distillation for visual grounding
+  with multimodal large language models.
+\newblock \emph{arXiv preprint arXiv:2607.15732}, 2026.
+
+\end{thebibliography}

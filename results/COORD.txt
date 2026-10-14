@@ -1,0 +1,30 @@
+720 cells from results\gpu_p3\coordinate_grounding.jsonl
+
+=== identify   (6 options, chance 16.7%)
+desc         ptok     visible      cached    mass
+cellname       46       96.7%       95.8%    1.00
+pixel         100       76.7%       77.5%    1.00
+norm1000       98       90.8%       90.0%    1.00
+  paired contrasts vs cellname (exact McNemar on discordant trials)
+    visible  pixel       -20.0 pts   cellname-only  27  pixel-only   3   p=8.43e-06
+    visible  norm1000     -5.8 pts   cellname-only  11  norm1000-only   4   p=1.18e-01
+    cached   pixel       -18.3 pts   cellname-only  25  pixel-only   3   p=2.74e-05
+    cached   norm1000     -5.8 pts   cellname-only  10  norm1000-only   3   p=9.23e-02
+
+=== locate   (9 options, chance 11.1%)
+desc         ptok     visible      cached    mass
+cellname       83       70.8%       68.3%    1.00
+pixel         183       42.5%       35.8%    1.00
+norm1000      187       58.3%       48.3%    1.00
+  paired contrasts vs cellname (exact McNemar on discordant trials)
+    visible  pixel       -28.3 pts   cellname-only  46  pixel-only  12   p=8.22e-06
+    visible  norm1000    -12.5 pts   cellname-only  34  norm1000-only  19   p=5.34e-02
+    cached   pixel       -32.5 pts   cellname-only  48  pixel-only   9   p=1.52e-07
+    cached   norm1000    -20.0 pts   cellname-only  38  norm1000-only  14   p=1.20e-03
+
+If pixel and norm1000 both fall far below cellname, the readout penalty
+is about coordinate systems and not about colour, and it reaches the
+pixel conventions localisation benchmarks are scored in. If norm1000
+holds while pixel falls, the claim sharpens instead: a model is usable
+in a coordinate system it was TRAINED in and not in one merely described
+to it, which is also why a CIELAB hue angle failed.
