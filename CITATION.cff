@@ -6,6 +6,7 @@ authors:
     given-names: "Alfredo F."
     affiliation: "Columbia University"
 license: MIT
+repository-code: "https://github.com/AlfredoFFD/vlm-readout-limit"
 type: software
 identifiers:
   - type: other
